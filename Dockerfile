@@ -10,6 +10,7 @@ ENV PYTHONUNBUFFERED 1
 #        py3-pip linux-headers git libcap-dev openssl-dev pcre-dev zlib-dev
 
 COPY ./requirements.txt /requirements.txt
+COPY ./.flake8 /.flake8
 RUN pip install -r /requirements.txt
 
 RUN mkdir /app
