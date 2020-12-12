@@ -27,4 +27,4 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=my-secret-password
     ports:
-    - "5000:5432"
+    - "8080:5432"
