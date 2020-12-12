@@ -9,9 +9,19 @@ ENV PYTHONUNBUFFERED 1
 #RUN apk add --no-cache bash python3 uwsgi uwsgi-python3 uwsgi-http build-base python3-dev \
 #        py3-pip linux-headers git libcap-dev openssl-dev pcre-dev zlib-dev
 
+RUN apk add --update --no-cache postgresql-client
+
+# in order to keep the applications docker image as light as possible, here we set up aliases for
+# temporary build dependencies. on line 23 we then delete these dependencies
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+        gcc libc-dev linux-headers postgresql-dev
+
+
 COPY ./requirements.txt /requirements.txt
 COPY ./.flake8 /.flake8
 RUN pip install -r /requirements.txt
+
+RUN apk del .tmp-build-deps
 
 RUN mkdir /app
 WORKDIR /app
