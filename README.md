@@ -10,7 +10,7 @@ a range of information.
 Atm the only info displayed will be a calendar that shows a user's spending on a 
 daily, weekly, monthly view. 
 
-Hopefully a intelligent search bar can be added later. 
+Hopefully an intelligent search bar can be added later. 
 
 
 ## Tech:
