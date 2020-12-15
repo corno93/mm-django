@@ -5,5 +5,5 @@ from . import serializers
 
 class CreateUserView(generics.CreateAPIView):
     """create new user"""
-    serializer_class = serializers.UserSerializer
 
+    serializer_class = serializers.UserSerializer
