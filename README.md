@@ -10,16 +10,15 @@ a range of information.
 Atm the only info displayed will be a calendar that shows a user's spending on a 
 daily, weekly, monthly view. 
 
-Hopefully an intelligent search bar can be added later. 
+Hopefully an intelligent search bar can be added later.
 
 
 ## Tech:
-- python3.9 
-- django
+- python 3.9 
+- django 3.1.4
 - django rest framework  
 - docker
 - travis ci
 - postgres
 - celery
 - rabbit qm
-
